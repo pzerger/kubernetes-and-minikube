@@ -1,11 +1,7 @@
-#######################################################
-# Publishing workloads on Kubernetes using Minikube
-#
-## Your first workload "Hello World"
-#
-#######################################################
 
-This is a great way to quickly validate your Minikube deployment is functional. 
+# Publishing workloads on Kubernetes using Minikube
+
+Your first workload is a "Hello World" type workload. This is a great way to quickly validate your Minikube deployment is functional. 
 
 `kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.10 --port=8080`
 
