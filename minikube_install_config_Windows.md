@@ -81,8 +81,7 @@ Open the grafana dashboard, simply type the command below and it will open in yo
 `Minikube addons open heapster `
 
 # Step 8: Test with hello-minikube
-If all the above are successful, proceed to 'minikube_run_a_workload.md' 
-and attempt to run your first workload.
+If all the above are successful, proceed to [**hello-minikube workload**](./minikube_run_helloworld_workload.md) and attempt to run your first workload.
 
 # Additional Guidance
 
