@@ -50,11 +50,12 @@ The default install directory is 'C:\Program Files (x86)\Kubernetes\Minikube'.
 2. Also, configure this path as as the value for an environment variable named MINIKUBE_HOME.
 
 # Step 5: Launch Minikube 
-It's a good idea to launch Minikube with verbose logging enabled, so if it fails to start, you will have some detail as to how. After you 
-install Minikube, the statement below will download the Minikube .iso, setup the VM, and establish the profile directory at "c:\users\your 
-username\.minikube" NOTE: If this command hangs on starting, just close the PowerShell window, open a new one and move to the next step.
+It's a good idea to launch Minikube with verbose logging enabled, so if it fails to start, you will have some detail as to how. After you install Minikube, the statement below will download the Minikube .iso, setup the VM, and establish the profile directory at "c:\users\your 
+username\.minikube" 
 
 `minikube start --vm-driver hyperv --hyperv-virtual-switch "minikube"  --v=7 --alsologtostderr`
+
+>NOTE: If this command hangs on starting, you can verify the minikube VM is running in Hyper-V Manager (as it usually is), close the PowerShell window, open a new one and move to the next step.
 
 # Step 6: Make sure addons are enabled 
 Sometimes the Heapster addon (which includes Grafana) is not enabled by default, and you will need this.
@@ -85,4 +86,4 @@ If all the above are successful, proceed to [**hello-minikube workload**](./mini
 
 # Additional Guidance
 
-Because minikube sometimes hangs on the 'minikube stop' command in this build, you may just want to leave minikube running. It takes < 1GB ram if you delete your running services. 
+Because minikube sometimes hangs on the 'minikube stop' command in this build. There are a few fixes around the Internet, but you may just want to leave minikube running. It takes < 1GB ram if you delete your running services. 
