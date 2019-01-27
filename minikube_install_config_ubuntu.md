@@ -2,8 +2,7 @@
 # Install & configure Minikube on Ubuntu  
 
 Step-by-step instructions to install & configure minikube on Ubuntu 18.04 LTS 
-Official docs @ https://kubernetes.io/docs/tasks/tools/install-minikube/
-
+Official docs @ https://kubernetes.io/docs/tasks/tools/install-minikub
 
 # Step 1: Install Virtualbox 
 Use the commands below, or find step-by-step instructions at https://linuxize.com/post/how-to-install-virtualbox-on-ubuntu-18-04/
@@ -12,7 +11,7 @@ Use the commands below, or find step-by-step instructions at https://linuxize.co
 `sudo apt install virtualbox virtualbox-ext-pack`
 
 # Step 2: Install Kubectl (using native package mgmt)
-# https://kubernetes.io/docs/tasks/tools/install-minikube/#install-kubectl
+https://kubernetes.io/docs/tasks/tools/install-minikube/#install-kubectl
 
 `snap install kubectl --class` 
 
@@ -31,3 +30,30 @@ you will have some detail as to how. After you install Minikube, the statement b
 download the Minikube .iso, setup the VM, and establish the profile directory at "c:\users\your username\.minikube"
 
 `minikube start --vm-driver virtualbox  --v=7 --alsologtostderr`
+
+# Step 5: Make sure addons are enabled 
+Sometimes the Heapster addon (which includes Grafana) is not enabled by default, and you will need this.
+
+First, list the available addons.
+`minikube addons list`
+
+If heapster(includes grafana & influx) and metrics-server show as disabled, enable them as follows:
+More on metrics-server and metrics API at https://github.com/kubernetes-incubator/metrics-server/
+
+`minikube addons enable heapster`
+
+`minikube addons enable metrics-server`
+
+View the pods you just created.
+
+# Step 6: Verify the dashboards are available 
+Open the kubernetes dashboard, simply type the command below and it will open in your default browser.
+
+`Minikube dashboard`
+
+Open the grafana dashboard, simply type the command below and it will open in your default browser.
+
+`Minikube addons open heapster `
+
+# Step 7: Test with hello-minikube
+If all the above are successful, proceed to [**hello-minikube workload**](./minikube_run_helloworld_workload.md) and attempt to run your first workload.
