@@ -11,7 +11,7 @@ Files in this repo include, the following, and should be consumed in this order.
 
 [**Install Minikube on Windows**](./minikube_install_config_Windows.md) Instructions for installing and configuring Minikube on Windows. _If you develop on a Windows 10 workstation, this is likely the right option for you._
 
-[**Minikube & Kubectl Command Cheat Sheet**](./Cmd_Cheat_Sheet.md) A command reference with syntax guidance for many operations in Minikube and the Kubectl, which is the command line interface for Kubernetes clusters.
+[**Minikube & Kubectl Command Cheat Sheet**](./Minikube_Cmd_Cheat_Sheet.md) A command reference with syntax guidance for many operations in Minikube and the Kubectl, which is the command line interface for Kubernetes clusters.
 
 [**Install Minikube on Ubuntu**](./minikube_install_config_ubuntu.md) Instructions for installing and configuring Minikube on Ubuntu._If you develop on an Ubuntu or other Linux workstation, this is likely the right option for you._
 
