@@ -13,7 +13,7 @@ Use the commands below, or find step-by-step instructions at https://linuxize.co
 # Step 2: Install Kubectl (using native package mgmt)
 https://kubernetes.io/docs/tasks/tools/install-minikube/#install-kubectl
 
-`snap install kubectl --class` 
+`snap install kubectl --classic` 
 
 # Step 3: Install minikube (using native package mgmt)
 https://kubernetes.io/docs/setup/minikube/#installation
